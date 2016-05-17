@@ -2,7 +2,7 @@
  * $AddBookmark - open native Add Bookmark modal.
  */
 export function $AddBookmark() {
-	
+
 	Qva.ContextClientAction({
 		clientAction: "modal",
 		param: "bm",
@@ -15,7 +15,7 @@ export function $AddBookmark() {
  * $RemoveBookmark - open native Remove Bookmark modal.
  */
 export function $RemoveBookmark() {
-	
+
 	Qva.ContextClientAction({
 		clientAction: "modal",
 		param: "removebm",

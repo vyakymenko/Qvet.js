@@ -1,45 +1,48 @@
-// TODO: Find another way to open repo without fake requests.
 /**
  * $Repository - open native Repository modal.
  *
- * @param defFilter {number} 0-3.
- * @param callback {function} Callback function.
+ * @param defFilter {number} 0-3 - Deprecated.
+ * @param callback {function} Callback function. - Deprecated.
  *
  * @note Repo can be opened only with fake request to QlikView ASP.NET Client.
  *      Reason is remote repository, QlikView open repository only after ASP.NET QlikView client request.
  *      We always have jQuery.
  * @url https://community.qlik.com/docs/DOC-2639
  */
-export function $OpenRepository(defFilter, callback) {
+export function $OpenRepository() {
 
-	let binder = Qv.GetCurrentDocument().binder,
-		mark = binder.Mark,
-		stamp = binder.Stamp,
-		view = binder.View,
-		repoFilter = defFilter > 3 && defFilter < 0 ? 0 : defFilter;
+	/**
+	 *  Deprecated version.
+	 *
 
-	let initRepoData = `<update
-					mark="`+ mark +`"
-					stamp="`+ stamp +`"
-					cookie="true"
-					scope="Document"
-					view="`+ view +`"
-					ident="null">
-						<set name="Document.StandardActions.REPOSITORY" action="" clientsizeWH="" position="" cursor="" />
-					</update>`,
-		showRepoData = `<update 
-					mark="`+ mark +`" 
-					stamp="`+ stamp +`" 
-					cookie="true" 
-					scope="Document" 
-					view="`+ view +`" 
-					ident="null">
-						<set name="Document.TOOLS\\REPOSITORY.Filter" 
-						value="`+ repoFilter +`" />
-					</update>`;
+	 let binder = Qv.GetCurrentDocument().binder,
+		 mark = binder.Mark,
+		 stamp = binder.Stamp,
+		 view = binder.View,
+		 repoFilter = defFilter > 3 && defFilter < 0 ? 0 : defFilter;
+
+	 let initRepoData = `<update
+	 mark="`+ mark +`"
+	 stamp="`+ stamp +`"
+	 cookie="true"
+	 scope="Document"
+	 view="`+ view +`"
+	 ident="null">
+	 <set name="Document.StandardActions.REPOSITORY" action="" clientsizeWH="" position="" cursor="" />
+	 </update>`,
+	 showRepoData = `<update
+	 mark="`+ mark +`"
+	 stamp="`+ stamp +`"
+	 cookie="true"
+	 scope="Document"
+	 view="`+ view +`"
+	 ident="null">
+	 <set name="Document.TOOLS\\REPOSITORY.Filter"
+	 value="`+ repoFilter +`" />
+	 </update>`;
 
 
-	let initRepository = () => {
+	 let initRepository = () => {
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				url: '/QvAjaxZfc/QvsViewClient.aspx?mark=' + mark + '&view=' + view,
@@ -57,7 +60,7 @@ export function $OpenRepository(defFilter, callback) {
 		});
 	};
 
-	let showRepository = () => {
+	 let showRepository = () => {
 		return new Promise((resolve, reject) => {
 			$.ajax({
 				url: '/QvAjaxZfc/QvsViewClient.aspx?mark=' + mark + '&view=' + view,
@@ -75,12 +78,17 @@ export function $OpenRepository(defFilter, callback) {
 		});
 	};
 
-	Promise.all([
-		initRepository(),
-		showRepository()
-	]).then(() => {
+	 Promise.all([
+	 initRepository(),
+	 showRepository()
+	 ]).then(() => {
 		if (typeof callback == 'function'){
 			return callback()
 		}
 	})
+	 */
+
+	Qva.Mgr.menu.doAction({
+		target: '.ctx-menu-action-REPOSITORY'
+	});
 }

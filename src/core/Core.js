@@ -2,6 +2,8 @@ const version = '0.0.1-alpha';
 
 import {$AddBookmark, $RemoveBookmark} from './native/Bookmarks';
 import {$OpenRepository} from './native/Repository';
+import {$ShowFields} from './native/ShowFields';
+import {$NewSheetObject} from './native/NewSheetObject';
 
 export class QvetCore {
 	constructor(){
@@ -10,9 +12,9 @@ export class QvetCore {
 				$add: $AddBookmark,
 				$remove: $RemoveBookmark
 			},
-			$openRepository(defaultFilter, fn){
-				$OpenRepository(defaultFilter, fn)
-			}
+			$openRepository: $OpenRepository,
+			$showFields: $ShowFields,
+			$newSheetObject: $NewSheetObject
 		}
 	}
 

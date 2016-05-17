@@ -25,6 +25,35 @@ $ npm i -g gulp browserify
 
 or you can download the latest version from "dist" folder.
 
+### Warning alpha version was tested with working toolbar!
+#### Documentation
+
+QlikView Add Bookmark Native Modal Open
+```javascript
+    Qvet.native.bookmarks.$add();
+```
+QlikView Remove Bookmark Native Modal Open
+```javascript
+    Qvet.native.bookmarks.$remove();
+```
+QlikView Repository Native Modal Open
+```javascript
+    Qvet.native.$openRepository();
+```
+QlikView ShowFields Native Modal Open
+```javascript
+    Qvet.native.$showFields();
+```
+QlikView NewSheetObject Native Modal Open
+```javascript
+    Qvet.native.$newSheetObject();
+```
+
+### Important to know!
+>> All native methods for qlik have a $ symbol.
+
+>> All non-native methods will not have a $.
+
 ### Hot to use
 
 Download latest version of Qvet, and copy it to your extension folder.
@@ -68,5 +97,6 @@ License
 
 MIT
 
+   [node.js]: <https://nodejs.org>
    [Gulp]: <http://gulpjs.com>
    [Browserify]: <http://browserify.org/>
