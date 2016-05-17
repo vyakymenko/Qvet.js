@@ -4,6 +4,6 @@ var gulp = require('gulp'),
 module.exports = function () {
 
 	gulp.watch(conf.src.jswatch,[
-		'js-dev'
+		'dev'
 	]);
 };
