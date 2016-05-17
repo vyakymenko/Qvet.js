@@ -6,7 +6,7 @@ Waht you can with Qvet:
   - Use all native toolbar actions and run them in your extensions.
 
 ### Version
-0.0.1-alpha
+0.0.2
 
 ### Tech
 
@@ -25,7 +25,7 @@ $ npm i -g gulp browserify
 
 or you can download the latest version from "dist" folder.
 
-### Warning alpha version was tested with working toolbar!
+### Warning Qvet was tested with working toolbar! If toolbar is not working for your QlikView document. Qvet will not work!
 #### Documentation
 
 QlikView Add Bookmark Native Modal Open
