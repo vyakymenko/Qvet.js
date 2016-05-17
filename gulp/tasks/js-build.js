@@ -12,13 +12,13 @@ module.exports = function () {
 
 	var tasks = conf.src.js.map(function(entry) {
 		return browserify({
-			entries: [conf.src.main+entry],
+			entries: [conf.src.main+entry+'.js'],
 			extensions: ['.js', '.json', '.es6']
 		})
 			.transform(babelify)
 			.bundle()
 			.on('error', gutil.log)
-			.pipe(source(conf.dist.main+entry))
+			.pipe(source(conf.dist.main+entry+'.min.js'))
 			.pipe(streamify(uglify({
 				preserveComments: "license"
 			})))

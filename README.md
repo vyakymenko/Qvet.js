@@ -1,2 +1,2 @@
-# qlikview-tricks
+# QlikView Extensions Trickster
 QlikView Extensions Tricks

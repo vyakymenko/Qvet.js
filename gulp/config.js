@@ -7,7 +7,7 @@ module.exports = {
 	src: {
 		main: 'src/',
 		js: [
-			'Qvet.js'
+			'Qvet'
 		],
 		jswatch: [
 			'src/**/*.js',
