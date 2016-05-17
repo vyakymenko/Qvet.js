@@ -1,2 +1,5 @@
 # JetBrains IDEA
 .idea/
+
+# NodeJS Modules
+node_modules/
