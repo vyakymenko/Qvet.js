@@ -1,10 +1,10 @@
 # Qvet.js
 
-Qvet is a QlikView Extensin Trickster wich help you to use native QlikView methods in your extensions. It give for you accessible for native QlikView methods like open repository pop-up window, add bookmark pop-up, remove bookmark pop-up that we have in toolbar and more.
+Qvet is a QlikView Extensin Trickster library wich help you to use native QlikView methods in your extensions. It give for you accessible for native QlikView methods like open repository pop-up window, add bookmark pop-up, remove bookmark pop-up that we have in toolbar and more.
 
 What you can with Qvet:
   - Use all native toolbar actions and run them in your extensions.
-  - Use interesting functionality for QlikView Exntesions.
+  - Use interesting functionality for QlikView Extensions.
 
 ### Version
 0.0.3
@@ -28,8 +28,8 @@ or you can download the latest version from "dist" folder.
 
 ### Hot to use
 
-Download latest version of Qvet, and copy it to your extension folder.
-Load Qvet in your extension for use it.
+Download the latest version of Qvet, and copy it to your extension folder.
+Load Qvet in your extension for using it.
 
 ```javascript
 var extPath = '/QvAjaxZfc/QvsViewClient.aspx?public=only&name=Extensions/MyExtension';
@@ -46,7 +46,7 @@ var extPath = '/QvAjaxZfc/QvsViewClient.aspx?public=only&name=Extensions/MyExten
 ```
 
 Warning Qvet "NATIVE" was tested with working toolbar!
-If toolbar is not working for your QlikView document, Qvet "NATIVE" will not work!
+If the toolbar is not working for your QlikView document, Qvet "NATIVE" will not work!
 
 #### Documentation
 
@@ -107,9 +107,9 @@ QlikView Send Bookmark via Email
 ```
 
 ### Important to know!
->> All native methods for qlik have a $ symbol.
+> All native methods for QlikView have a $ symbol.
 
->> All non-native methods will not have a $.
+> All non-native methods will not have a $.
 
 ### Development
 
@@ -126,7 +126,7 @@ $ gulp
 
 ### Todos
 
- - Write all other native methds
+ - Write all other native methods
  - Write new features
  - Add Code Comments
 
