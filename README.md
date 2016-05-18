@@ -7,7 +7,7 @@ What you can with Qvet:
   - Use interesting functionality for QlikView Exntesions.
 
 ### Version
-0.0.2
+0.0.3
 
 ### Tech
 
@@ -26,9 +26,10 @@ $ npm i -g gulp browserify
 
 or you can download the latest version from "dist" folder.
 
-### Warning Qvet was tested with working toolbar! If toolbar is not working for your QlikView document. Qvet will not work!
+### Warning Qvet "NATIVE" was tested with working toolbar! If toolbar is not working for your QlikView document. Qvet "NATIVE" will not work!
 #### Documentation
 
+#### Native
 QlikView Add Bookmark Native Modal Open
 ```javascript
     Qvet.native.bookmarks.$add();
@@ -50,9 +51,42 @@ QlikView NewSheetObject Native Modal Open
     Qvet.native.$newSheetObject();
 ```
 
+#### Addition
+QlikView Send Bookmark via Email
+```javascript
+    // Without configuration.
+    Qvet.sendEmailBookmark();
+
+    // With configuration.
+    Qvet.sendEmailBookmark({
+		emailSubject: "Your Subject",
+		name: "Your Bookmark Name", /** Name of the bookmark. */
+		shared: true, /** Share the bookmark with other users. */
+		excludeSelections: false, /** Exclude the selections made in the application. */
+		includeState: true, /** Include state of all objects. */
+		notDisplayed: false, /** The bookmark is not displayed in the bookmark list but is still selectable in code or via url. */
+		descriptionShow: false, /** The bookmark description will be shown in a message when the bookmark is selected. */
+		descriptionMsg: "", /** Description of the bookmark. */
+		saveInputValues: true /** Include values in input fields.*/
+	})
+    // Extra params.
+    Qvet.sendEmailBookmark({
+    		emailSubject: "Your Subject",
+    		name: "Your Bookmark Name", /** Name of the bookmark. */
+    		shared: true, /** Share the bookmark with other users. */
+    		excludeSelections: false, /** Exclude the selections made in the application. */
+    		includeState: true, /** Include state of all objects. */
+    		notDisplayed: false, /** The bookmark is not displayed in the bookmark list but is still selectable in code or via url. */
+    		descriptionShow: false, /** The bookmark description will be shown in a message when the bookmark is selected. */
+    		descriptionMsg: "", /** Description of the bookmark. */
+    		saveInputValues: true /** Include values in input fields.*/
+    	},{
+    	    emailWindowMode: false /** By default bookmark will open email in new window, but you can change it to {false} and email window will be opened on same domain. */
+        })
+```
+
 ### Important to know!
 >> All native methods for qlik have a $ symbol.
-
 >> All non-native methods will not have a $.
 
 ### Hot to use
