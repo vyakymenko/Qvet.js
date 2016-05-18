@@ -26,7 +26,28 @@ $ npm i -g gulp browserify
 
 or you can download the latest version from "dist" folder.
 
-### Warning Qvet "NATIVE" was tested with working toolbar! If toolbar is not working for your QlikView document. Qvet "NATIVE" will not work!
+### Hot to use
+
+Download latest version of Qvet, and copy it to your extension folder.
+Load Qvet in your extension for use it.
+
+```javascript
+var extPath = '/QvAjaxZfc/QvsViewClient.aspx?public=only&name=Extensions/MyExtension';
+
+    Qva.LoadScript(extPath+'/Qvet.js', loadExt);
+
+    function loadExt(){
+        Qva.AddExtension("MyExtension", function(){
+            Qvet.getVersion();
+
+            // .... Qvet Works!
+        })
+    }
+```
+
+Warning Qvet "NATIVE" was tested with working toolbar!
+If toolbar is not working for your QlikView document, Qvet "NATIVE" will not work!
+
 #### Documentation
 
 #### Native
@@ -87,26 +108,8 @@ QlikView Send Bookmark via Email
 
 ### Important to know!
 >> All native methods for qlik have a $ symbol.
+
 >> All non-native methods will not have a $.
-
-### Hot to use
-
-Download latest version of Qvet, and copy it to your extension folder.
-Load Qvet in your extension for use it.
-
-```javascript
-var extPath = '/QvAjaxZfc/QvsViewClient.aspx?public=only&name=Extensions/MyExtension';
-
-    Qva.LoadScript(extPath+'/Qvet.js', loadExt);
-
-    function loadExt(){
-        Qva.AddExtension("MyExtension", function(){
-            Qvet.getVersion();
-
-            // .... Qvet Works!
-        })
-    }
-```
 
 ### Development
 
