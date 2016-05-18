@@ -1,3 +1,5 @@
+import {$tv} from '../util/Util';
+
 /**
  * Email QlikView Bookmark.
  * 
@@ -53,25 +55,37 @@ export class EmailBookmark {
 		 * Important params.
 		 * @type {*|string}
 		 */
-		this.emailSubject = config.emailSubject || defaultConfig.emailSubject;
-		this.name = config.name || defaultConfig.name;
-		this.shared = config.shared || defaultConfig.shared;
-		this.excludeSelections = config.excludeSelections || defaultConfig.excludeSelections;
-		this.includeState = config.includeState || defaultConfig.includeState;
-		this.notDisplayed = config.notDisplayed || defaultConfig.notDisplayed;
-		this.descriptionShow = config.descriptionShow || defaultConfig.descriptionShow;
-		this.descriptionMsg = config.descriptionMsg || defaultConfig.descriptionMsg;
-		this.saveInputValues = config.saveInputValues || defaultConfig.saveInputValues;
+		if ($tv(config, 'object')){
+			this.emailSubject = config.emailSubject || defaultConfig.emailSubject;
+			this.name = config.name || defaultConfig.name;
+			this.shared = config.shared || defaultConfig.shared;
+			this.excludeSelections = config.excludeSelections || defaultConfig.excludeSelections;
+			this.includeState = config.includeState || defaultConfig.includeState;
+			this.notDisplayed = config.notDisplayed || defaultConfig.notDisplayed;
+			this.descriptionShow = config.descriptionShow || defaultConfig.descriptionShow;
+			this.descriptionMsg = config.descriptionMsg || defaultConfig.descriptionMsg;
+			this.saveInputValues = config.saveInputValues || defaultConfig.saveInputValues;
+		}else{
+			for (let key in defaultConfig){
+				if (defaultConfig.hasOwnProperty(key))
+					this[key] = defaultConfig[key];
+			}
+		}
 	
 		/**
 		 * Extra params.
 		 *
-		 * @param extraUri {string} Use it for add parent url to your QlikView ASP.NET client.
+		 * @param extraUri {string} Use it for add parent url to your QlikView ASP.NET client. TODO: In Development.
 		 * @param emailWindowMode {boolean} By default bookmark will open email in new window,
 		 * but you can change it to {false} and email window will be opened on same domain.
 		 */
-		this.extraUri = extraParams.extraUri || '';
-		this.emailWindowMode = extraParams.emailWindowMode || true;
+		if ($tv(extraParams, 'object')){
+			this.extraUri = extraParams.extraUri || '';
+			this.emailWindowMode = extraParams.emailWindowMode || true;
+		}else{
+			this.extraUri = '';
+			this.emailWindowMode = true;
+		}
 	}
 
 
@@ -105,8 +119,10 @@ export class EmailBookmark {
 	openEmailWindow(){
 		
 		let uri = this.extraUri +
+			window.location.origin +
 			this.defaulQvAjxZfc +
 			this.doc.binder.View +
+			'&bookmark='+
 			this.bookmarkId;
 		
 		let uri_enc = encodeURIComponent(uri).replace(/%20/g, "%2520"),
