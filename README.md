@@ -59,7 +59,7 @@ QlikView Remove Bookmark Native Modal Open
 ```javascript
     Qvet.native.bookmarks.$remove();
 ```
-QlikView Email Bookmark Native Modal Open
+QlikView Email Bookmark Native
 ```javascript
     Qvet.native.bookmarks.$email();
 ```
