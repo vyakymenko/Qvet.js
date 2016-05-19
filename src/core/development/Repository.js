@@ -1,5 +1,6 @@
 /**
- * $Repository - open native Repository modal.
+ * @name $OpenRepositoryAjax {function}
+ * Open native Repository modal via $.ajax.
  *
  * @param defFilter {number} 0-3 - Deprecated.
  * @param callback {function} Callback function. - Deprecated.
@@ -9,11 +10,7 @@
  *      We always have jQuery.
  * @url https://community.qlik.com/docs/DOC-2639
  */
-export function $OpenRepository() {
-
-	/**
-	 *  Deprecated version.
-	 *
+export function $OpenRepositoryAjax(defFilter, callback) {
 
 	 let binder = Qv.GetCurrentDocument().binder,
 		 mark = binder.Mark,
@@ -22,24 +19,24 @@ export function $OpenRepository() {
 		 repoFilter = defFilter > 3 && defFilter < 0 ? 0 : defFilter;
 
 	 let initRepoData = `<update
-	 mark="`+ mark +`"
-	 stamp="`+ stamp +`"
-	 cookie="true"
-	 scope="Document"
-	 view="`+ view +`"
-	 ident="null">
-	 <set name="Document.StandardActions.REPOSITORY" action="" clientsizeWH="" position="" cursor="" />
-	 </update>`,
+	        mark="`+ mark +`"
+	        stamp="`+ stamp +`"
+	        cookie="true"
+	        scope="Document"
+	        view="`+ view +`"
+	        ident="null">
+	            <set name="Document.StandardActions.REPOSITORY" action="" clientsizeWH="" position="" cursor="" />
+	        </update>`,
 	 showRepoData = `<update
-	 mark="`+ mark +`"
-	 stamp="`+ stamp +`"
-	 cookie="true"
-	 scope="Document"
-	 view="`+ view +`"
-	 ident="null">
-	 <set name="Document.TOOLS\\REPOSITORY.Filter"
-	 value="`+ repoFilter +`" />
-	 </update>`;
+	        mark="`+ mark +`"
+	        stamp="`+ stamp +`"
+	        cookie="true"
+	        scope="Document"
+	        view="`+ view +`"
+	        ident="null">
+	            <set name="Document.TOOLS\\REPOSITORY.Filter"
+	            value="`+ repoFilter +`" />
+	        </update>`;
 
 
 	 let initRepository = () => {
@@ -86,9 +83,4 @@ export function $OpenRepository() {
 			return callback()
 		}
 	})
-	 */
-
-	Qva.Mgr.menu.doAction({
-		target: '.ctx-menu-action-REPOSITORY'
-	});
 }
