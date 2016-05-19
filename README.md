@@ -7,7 +7,7 @@ What you can with Qvet:
   - Use interesting functionality for QlikView Extensions.
 
 ### Version
-0.0.3
+0.0.4
 
 ### Tech
 
