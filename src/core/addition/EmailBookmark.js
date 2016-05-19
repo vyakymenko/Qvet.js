@@ -33,19 +33,19 @@ export class EmailBookmark {
 		
 		let defaultConfig = {
 			emailSubject: "",
-			name: "Email Bookmark", /** Name of the bookmark. */
-			shared: true, /** Share the bookmark with other users. */
+			name: "Email Bookmark", /** Name of the addition. */
+			shared: true, /** Share the addition with other users. */
 			excludeSelections: false, /** Exclude the selections made in the application. */
 			includeState: true, /** Include state of all objects. */
-			notDisplayed: false, /** The bookmark is not displayed in the bookmark list but is still selectable in code or via url. */
-			descriptionShow: false, /** The bookmark description will be shown in a message when the bookmark is selected. */
-			descriptionMsg: "", /** Description of the bookmark. */
+			notDisplayed: false, /** The addition is not displayed in the addition list but is still selectable in code or via url. */
+			descriptionShow: false, /** The addition description will be shown in a message when the addition is selected. */
+			descriptionMsg: "", /** Description of the addition. */
 			saveInputValues: true /** Include values in input fields.*/
 		};
 	
 		this.defaulQvAjxZfc = '/QvAJAXZfc/opendoc.htm?document=';
 		
-		/** The bookmark is applied on top of any previous selections (no clear).*/
+		/** The addition is applied on top of any previous selections (no clear).*/
 		this.applied = true;
 		this.doc = Qv.GetCurrentDocument();
 		this.bookmarkId = '';
@@ -76,7 +76,7 @@ export class EmailBookmark {
 		 * Extra params.
 		 *
 		 * @param extraUri {string} Use it for add parent url to your QlikView ASP.NET client. TODO: In Development.
-		 * @param emailWindowMode {boolean} By default bookmark will open email in new window,
+		 * @param emailWindowMode {boolean} By default addition will open email in new window,
 		 * but you can change it to {false} and email window will be opened on same domain.
 		 */
 		if ($tv(extraParams, 'object')){
@@ -91,7 +91,7 @@ export class EmailBookmark {
 
 	/**
 	 * Use native Bookmarks Class
-	 * for create bookmark before email it.
+	 * for create addition before email it.
 	 *
 	 * @extends {}
 	 */
@@ -122,7 +122,7 @@ export class EmailBookmark {
 			window.location.origin +
 			this.defaulQvAjxZfc +
 			this.doc.binder.View +
-			'&bookmark='+
+			'&addition='+
 			this.bookmarkId;
 		
 		let uri_enc = encodeURIComponent(uri).replace(/%20/g, "%2520"),
