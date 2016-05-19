@@ -1,30 +1,48 @@
-const version = '0.0.1-alpha';
+const version = '0.0.4';
 
 /**
  * Native.
  */
-import {$AddBookmark, $RemoveBookmark} from './native/Bookmarks';
-import {$OpenRepository} from './native/Repository';
-import {$ShowFields} from './native/ShowFields';
-import {$NewSheetObject} from './native/NewSheetObject';
+import {
+	$AddBookmark, $RemoveBookmark, $EmailBookmark,
+	$NewSheetObject,
+	$OpenRepository,
+	$ShowFields
+} from './native/ToolbarActions';
+
+/**
+ * Development.
+ */
+import {$AddBookmarkQva, $RemoveBookmarkQva} from './development/Bookmarks';
+import {$OpenRepositoryAjax} from './development/Repository';
 
 /**
  * Addition.
  */
-import {EmailBookmark} from './bookmark/EmailBookmark';	
+import {EmailBookmark} from './addition/EmailBookmark';
 
 export class QvetCore {
+	
 	constructor(){
-
 		this.native = {
 			bookmarks:{
 				$add: $AddBookmark,
-				$remove: $RemoveBookmark
+				$remove: $RemoveBookmark,
+				$email: $EmailBookmark
 			},
 			$openRepository: $OpenRepository,
 			$showFields: $ShowFields,
 			$newSheetObject: $NewSheetObject
 		};
+		
+		// TODO: Dev versions for Qva and $.ajax when toolbar not initialized.
+		this.development = {
+			bookmarks: {
+				$add: $AddBookmarkQva,
+				$remove: $RemoveBookmarkQva
+			},
+			$openRepository: $OpenRepositoryAjax
+		}
 	}
 
 	getVersion(){

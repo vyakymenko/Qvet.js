@@ -7,7 +7,7 @@ What you can with Qvet:
   - Use interesting functionality for QlikView Extensions.
 
 ### Version
-0.0.3
+0.0.4
 
 ### Tech
 
@@ -58,6 +58,10 @@ QlikView Add Bookmark Native Modal Open
 QlikView Remove Bookmark Native Modal Open
 ```javascript
     Qvet.native.bookmarks.$remove();
+```
+QlikView Email Bookmark Native Modal Open
+```javascript
+    Qvet.native.bookmarks.$email();
 ```
 QlikView Repository Native Modal Open
 ```javascript
