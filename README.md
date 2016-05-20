@@ -110,6 +110,26 @@ QlikView Send Bookmark via Email
         })
 ```
 
+QlikView Select Values in ListBoxes
+```javascript
+    // 
+    Qvet.SelectListBoxValues([
+        {
+            name: 'YourListBoxId1',
+            values: [
+                "Your listbox first value",
+                "Your listbox second value"
+            ]
+        },{
+            name: 'YourListBoxId2',
+            values: [
+                "Your listbox first value",
+                "Your listbox second value"
+            ]
+        }
+    ])
+```
+
 ### Important to know!
 > All native methods for QlikView have a $ symbol.
 

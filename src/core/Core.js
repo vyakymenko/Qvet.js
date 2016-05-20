@@ -1,4 +1,4 @@
-const version = '0.0.4';
+const version = '0.0.5';
 
 /**
  * Native.
@@ -20,6 +20,7 @@ import {$OpenRepositoryAjax} from './development/Repository';
  * Addition.
  */
 import {EmailBookmark} from './addition/EmailBookmark';
+import {SelectListBoxValues} from './addition/SelectListBoxValues';
 
 export class QvetCore {
 	
@@ -42,7 +43,12 @@ export class QvetCore {
 				$remove: $RemoveBookmarkQva
 			},
 			$openRepository: $OpenRepositoryAjax
-		}
+		};
+
+		// // this.selectListBoxValues: 
+		// selectListBoxValues(){
+		//
+		// }
 	}
 
 	getVersion(){
@@ -51,5 +57,9 @@ export class QvetCore {
 
 	sendEmailBookmark(config, extraParams){
 		return new EmailBookmark(config, extraParams).createBookmark().openEmailWindow();
+	}
+
+	selectListBoxValues(listBoxArray){
+		return SelectListBoxValues(listBoxArray, 0)
 	}
 }
