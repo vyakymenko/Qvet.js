@@ -1,6 +1,6 @@
 # Qvet.js
 
-Qvet is a QlikView Extensin Trickster library wich help you to use native QlikView methods in your extensions. It give for you accessible for native QlikView methods like open repository pop-up window, add bookmark pop-up, remove bookmark pop-up that we have in toolbar and more.
+Qvet is a QlikView Extension Trickster library wich help you to use native QlikView methods and cool additional features in your extensions. It give for you accessible for native QlikView methods like open repository pop-up window, add bookmark pop-up, remove bookmark pop-up that we have in toolbar and more. You can use Qvet in your Object and Document extensions.
 
 What you can with Qvet:
   - Use all native toolbar actions and run them in your extensions.
