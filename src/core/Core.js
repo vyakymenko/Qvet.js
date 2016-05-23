@@ -44,11 +44,6 @@ export class QvetCore {
 			},
 			$openRepository: $OpenRepositoryAjax
 		};
-
-		// // this.selectListBoxValues: 
-		// selectListBoxValues(){
-		//
-		// }
 	}
 
 	getVersion(){
@@ -59,7 +54,7 @@ export class QvetCore {
 		return new EmailBookmark(config, extraParams).createBookmark().openEmailWindow();
 	}
 
-	selectListBoxValues(listBoxArray){
-		return SelectListBoxValues(listBoxArray, 0)
+	selectListBoxValues(listBoxArray, index, afterFn){
+		return SelectListBoxValues(listBoxArray, index, afterFn)
 	}
 }

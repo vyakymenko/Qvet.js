@@ -127,7 +127,11 @@ QlikView Select Values in ListBoxes
                 "Your listbox second value"
             ]
         }
-    ])
+    ],
+    0, // We can start make selections from any index.  
+    function(){
+        console.log('We like QlikView with Qvet!'); // It's our callback!
+    })
 ```
 
 ### Important to know!
