@@ -1,4 +1,10 @@
-# Qvet.js
+# Introduction to Qvet.js
+
+[![Join to the chat](https://badges.gitter.im/vyakymenko/Qvet.js.svg)](https://gitter.im/vyakymenko/Qvet.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![Dependency Status](https://david-dm.org/vyakymenko/Qvet.js.svg)](https://david-dm.org/vyakymenko/Qvet.js)
+[![devDependency Status](https://david-dm.org/vyakymenko/Qvet.js/dev-status.svg)](https://david-dm.org/vyakymenko/Qvet.js#info=devDependencies)
+
 
 Qvet is a QlikView Extension Trickster library wich help you to use native QlikView methods and cool additional features in your extensions. It give for you accessible for native QlikView methods like open repository pop-up window, add bookmark pop-up, remove bookmark pop-up that we have in toolbar and more. You can use Qvet in your Object and Document extensions.
 
