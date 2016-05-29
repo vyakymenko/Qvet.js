@@ -5,14 +5,3 @@ node_js:
   - stable
 
 sudo: false
-
-os:
-  - linux
-  - osx
-
-matrix:
-  exclude:
-    - os: osx
-      node_js: 4
-    - os: osx
-      node_js: 5
