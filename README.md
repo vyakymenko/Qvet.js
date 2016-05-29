@@ -2,6 +2,7 @@
 
 [![Join to the chat](https://badges.gitter.im/vyakymenko/Qvet.js.svg)](https://gitter.im/vyakymenko/Qvet.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Build Status](https://travis-ci.org/vyakymenko/Qvet.js.svg?branch=master)](https://travis-ci.org/vyakymenko/Qvet.js)
+[![Build status](https://ci.appveyor.com/api/projects/status/rkarsh6v33hpu5ec?svg=true)](https://ci.appveyor.com/project/vyakymenko/qvet-js)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://david-dm.org/vyakymenko/Qvet.js.svg)](https://david-dm.org/vyakymenko/Qvet.js)
 [![devDependency Status](https://david-dm.org/vyakymenko/Qvet.js/dev-status.svg)](https://david-dm.org/vyakymenko/Qvet.js#info=devDependencies)
