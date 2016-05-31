@@ -1,6 +1,6 @@
 {
   "name": "Qvet",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "QlikView Extension Trickster",
   "main": "gulpfile.js",
   "browserify": {
