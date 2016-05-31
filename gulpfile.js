@@ -17,8 +17,7 @@ gulp.task('build', function () {
 
 gulp.task('dev', function () {
 	sequence(
-		'js-dev',
-		'license'
+		'js-dev'
 	);
 });
 
