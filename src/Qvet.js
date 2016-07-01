@@ -1,4 +1,4 @@
-import {QvetCore} from './core/Core';
+import { QvetCore } from './core/Core';
 
 (function(window){
 	if (typeof Qva === 'undefined'

@@ -4,7 +4,7 @@
  * $('#QvAjaxToolbar');
  */
 
-import {$QvaToolbarAction} from '../util/Util';
+import { $QvaToolbarAction } from '../util/Util';
 
 /**
  * @name $ShowFields {function}
@@ -12,6 +12,7 @@ import {$QvaToolbarAction} from '../util/Util';
  */
 export function $AddBookmark() {
 	$QvaToolbarAction('ADDBM');
+  console.log(`Qvet: 'native.bookmarks.$add' is deprecated and will be removed in 1.1.0. Use '$addBookmark'.`)
 }
 
 /**
@@ -20,6 +21,7 @@ export function $AddBookmark() {
  */
 export function $RemoveBookmark() {
 	$QvaToolbarAction('REMBM');
+  console.log(`Qvet: 'native.bookmarks.$remove' is deprecated and will be removed in 1.1.0. Use '$addBookmark'.`)
 }
 
 /**

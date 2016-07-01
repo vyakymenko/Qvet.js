@@ -15,27 +15,14 @@ What you can with Qvet:
   - Use all native toolbar actions and run them in your extensions.
   - Use interesting functionality for QlikView Extensions.
 
-### Version
-1.0.0
+# Version
+1.0.1
 
-### Tech
+# Installation
 
-Qvet uses a number of open source projects to work properly:
+Download the latest version from "dist" folder.
 
-* [node.js] - evented I/O for the backend
-* [Gulp] - the streaming build system
-* [Browserify] - awesome bundler
-
-### Installation
-1. You can clone repository and export Qvet Core Class.
-2. You can download the latest version from "dist" folder.
-3. You can install this with npm:
-```sh
-$ npm i qvet --save-dev
-```
-4. (In dev.. install via Bower)
-
-### Hot to use
+# Hot to use
 
 Load Qvet in your extension for using it.
 
@@ -53,12 +40,13 @@ var extPath = '/QvAjaxZfc/QvsViewClient.aspx?public=only&name=Extensions/MyExten
     }
 ```
 
-Warning Qvet "NATIVE" was tested with working toolbar!
+> Only for v. 1.0.0 and lower. 
+> > Warning Qvet "NATIVE" was tested with working toolbar!
 If the toolbar is not working for your QlikView document, Qvet "NATIVE" will not work!
 
-#### Documentation
+## Documentation
 
-#### Native
+### Native
 QlikView Add Bookmark Native Modal Open
 ```javascript
     Qvet.native.bookmarks.$add();
@@ -84,7 +72,7 @@ QlikView NewSheetObject Native Modal Open
     Qvet.native.$newSheetObject();
 ```
 
-#### Addition
+### Addition
 QlikView Send Bookmark via Email
 ```javascript
     // Without configuration.
@@ -143,22 +131,14 @@ QlikView Select Values in ListBoxes
     })
 ```
 
-### Important to know!
-> All native methods for QlikView have a $ symbol.
+### Hint's and tricks.
 
-> All non-native methods will not have a $.
+> Q. How to understand where is native hidden QlikView actions ?
+> A. All native methods using *$* character.
 
-### Todos
+> Q. How to understand where is addition hidden QlikView actions ?
+> A. All non-native methods will not have a *$* character.
 
- - Write all other native methods
- - Write new features
- - Add Code Comments
-
-License
-----
+## License
 
 MIT
-
-   [node.js]: <https://nodejs.org>
-   [Gulp]: <http://gulpjs.com>
-   [Browserify]: <http://browserify.org/>

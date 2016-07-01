@@ -8,7 +8,11 @@ import {
 	$NewSheetObject,
 	$OpenRepository,
 	$ShowFields
-} from './native/ToolbarActions';
+} from './native/ToolbarActions_deprecated';
+
+import {
+  $removeBookmark, $addBookmark
+} from './native/index';
 
 /**
  * Development.
@@ -35,15 +39,15 @@ export class QvetCore {
 			$newSheetObject: $NewSheetObject
 		};
 
-		// TODO: Dev versions for Qva and $.ajax when toolbar not initialized.
 		this.development = {
-			bookmarks: {
-				$add: $AddBookmarkQva,
-				$remove: $RemoveBookmarkQva
-			},
 			$openRepository: $OpenRepositoryAjax
 		};
 
+    // native
+    this.$addBookmark = $addBookmark;
+    this.$removeBookmark = $removeBookmark;
+
+    // addition
     this.selectListBoxValues = selectListBoxValues;
 	}
 
