@@ -19,8 +19,7 @@ import {$OpenRepositoryAjax} from './development/Repository';
 /**
  * Addition.
  */
-import {EmailBookmark} from './addition/EmailBookmark';
-import {SelectListBoxValues} from './addition/SelectListBoxValues';
+import { EmailBookmark, selectListBoxValues } from './addition/index';
 
 export class QvetCore {
 
@@ -44,17 +43,16 @@ export class QvetCore {
 			},
 			$openRepository: $OpenRepositoryAjax
 		};
+
+    this.selectListBoxValues = selectListBoxValues;
 	}
 
+
 	getVersion(){
-		return console.log('Qvet version: ' + version);
+		console.log(`Qvet Core version: ${version}`);
 	}
 
 	sendEmailBookmark(config, extraParams){
 		return new EmailBookmark(config, extraParams).createBookmark().openEmailWindow();
-	}
-
-	selectListBoxValues(listBoxArray, index, afterFn){
-		return SelectListBoxValues(listBoxArray, index, afterFn)
 	}
 }
