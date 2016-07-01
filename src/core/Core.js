@@ -17,8 +17,7 @@ import {
 /**
  * Development.
  */
-import {$AddBookmarkQva, $RemoveBookmarkQva} from './development/Bookmarks';
-import {$OpenRepositoryAjax} from './development/Repository';
+import { $OpenRepositoryAjax } from './development/Repository';
 
 /**
  * Addition.
