@@ -46,6 +46,7 @@ export function $NewSheetObject() {
  */
 export function $OpenRepository() {
 	$QvaToolbarAction('REPOSITORY');
+  console.log(`Qvet: 'native.$openRepository' is deprecated and will be removed in 1.1.0. Use '$openRepository'.`)
 }
 
 /**

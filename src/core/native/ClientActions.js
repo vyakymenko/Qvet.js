@@ -1,7 +1,6 @@
 /**
  * @name Call ClientContext Action
  * @note Open client action modal for remove or add bookmark.
- * @dependencies Qva - QlikView assistant manager.
  *
  * @param actionName {string} - Action name `ADDBM` or `REMBM`.
  * @param paramName {string} - Param name `bm` or `rembm`.
@@ -20,7 +19,6 @@ export function $callClientAction (actionName, paramName) {
 /**
  * @name Remove Bookmark.
  * @note Open remove bookmark modal window.
- * @dependencies `$callClientAction`
  *
  * @return {void}
  */
@@ -31,7 +29,6 @@ export function $removeBookmark () {
 /**
  * @name Add Bookmark.
  * @note Open add bookmark modal window.
- * @dependencies `$callClientAction`
  *
  * @return {void}
  */

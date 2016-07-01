@@ -1,4 +1,4 @@
-const version = '1.0.0';
+const version = require('../../package.json').version;
 
 /**
  * Native.
@@ -11,13 +11,9 @@ import {
 } from './native/ToolbarActions_deprecated';
 
 import {
-  $removeBookmark, $addBookmark
+  $removeBookmark, $addBookmark,
+  $openRepository
 } from './native/index';
-
-/**
- * Development.
- */
-import { $OpenRepositoryAjax } from './development/Repository';
 
 /**
  * Addition.
@@ -38,13 +34,10 @@ export class QvetCore {
 			$newSheetObject: $NewSheetObject
 		};
 
-		this.development = {
-			$openRepository: $OpenRepositoryAjax
-		};
-
     // native
     this.$addBookmark = $addBookmark;
     this.$removeBookmark = $removeBookmark;
+    this.$openRepository = $openRepository;
 
     // addition
     this.selectListBoxValues = selectListBoxValues;
