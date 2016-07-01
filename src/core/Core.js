@@ -1,4 +1,4 @@
-const version = '0.0.5';
+const version = '1.0.0';
 
 /**
  * Native.
@@ -23,7 +23,7 @@ import {EmailBookmark} from './addition/EmailBookmark';
 import {SelectListBoxValues} from './addition/SelectListBoxValues';
 
 export class QvetCore {
-	
+
 	constructor(){
 		this.native = {
 			bookmarks:{
@@ -35,7 +35,7 @@ export class QvetCore {
 			$showFields: $ShowFields,
 			$newSheetObject: $NewSheetObject
 		};
-		
+
 		// TODO: Dev versions for Qva and $.ajax when toolbar not initialized.
 		this.development = {
 			bookmarks: {

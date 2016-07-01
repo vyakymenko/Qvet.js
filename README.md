@@ -1,19 +1,22 @@
 # Introduction to Qvet.js
 
-[![Join to the chat](https://badges.gitter.im/vyakymenko/Qvet.js.svg)](https://gitter.im/vyakymenko/Qvet.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Build Status](https://travis-ci.org/vyakymenko/Qvet.js.svg?branch=master)](https://travis-ci.org/vyakymenko/Qvet.js)
+[![Build status](https://ci.appveyor.com/api/projects/status/rkarsh6v33hpu5ec?svg=true)](https://ci.appveyor.com/project/vyakymenko/qvet-js)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 [![Dependency Status](https://david-dm.org/vyakymenko/Qvet.js.svg)](https://david-dm.org/vyakymenko/Qvet.js)
 [![devDependency Status](https://david-dm.org/vyakymenko/Qvet.js/dev-status.svg)](https://david-dm.org/vyakymenko/Qvet.js#info=devDependencies)
 
 
-Qvet is a QlikView Extension Trickster library wich help you to use native QlikView methods and cool additional features in your extensions. It give for you accessible for native QlikView methods like open repository pop-up window, add bookmark pop-up, remove bookmark pop-up that we have in toolbar and more. You can use Qvet in your Object and Document extensions.
+Qvet is a QlikView Extension Trickster library wich help you to use native QlikView methods and cool additional features in your extensions. 
+It give for you accessible for native QlikView methods like open repository pop-up window, add bookmark pop-up, remove bookmark pop-up that we have in toolbar and more. 
+You can use Qvet in your Object and Document extensions.
 
 What you can with Qvet:
   - Use all native toolbar actions and run them in your extensions.
   - Use interesting functionality for QlikView Extensions.
 
 ### Version
-0.0.5
+1.0.0
 
 ### Tech
 
@@ -24,17 +27,16 @@ Qvet uses a number of open source projects to work properly:
 * [Browserify] - awesome bundler
 
 ### Installation
-For development you need Gulp and Browserify installed globally:
-
+1. You can clone repository and export Qvet Core Class.
+2. You can download the latest version from "dist" folder.
+3. You can install this with npm:
 ```sh
-$ npm i -g gulp browserify
+$ npm i qvet --save-dev
 ```
-
-or you can download the latest version from "dist" folder.
+4. (In dev.. install via Bower)
 
 ### Hot to use
 
-Download the latest version of Qvet, and copy it to your extension folder.
 Load Qvet in your extension for using it.
 
 ```javascript
@@ -100,6 +102,7 @@ QlikView Send Bookmark via Email
 		descriptionMsg: "", /** Description of the bookmark. */
 		saveInputValues: true /** Include values in input fields.*/
 	})
+	
     // Extra params.
     Qvet.sendEmailBookmark({
     		emailSubject: "Your Subject",
@@ -112,13 +115,13 @@ QlikView Send Bookmark via Email
     		descriptionMsg: "", /** Description of the bookmark. */
     		saveInputValues: true /** Include values in input fields.*/
     	},{
-    	    emailWindowMode: false /** By default bookmark will open email in new window, but you can change it to {false} and email window will be opened on same domain. */
+    	    emailWindowMode: false /** By default {false} bookmark will open email in new window, but you can change it to {true} and email window will be opened on same domain. */
         })
 ```
 
 QlikView Select Values in ListBoxes
 ```javascript
-    // 
+    // SelectListBoxValues 
     Qvet.SelectListBoxValues([
         {
             name: 'YourListBoxId1',
@@ -144,19 +147,6 @@ QlikView Select Values in ListBoxes
 > All native methods for QlikView have a $ symbol.
 
 > All non-native methods will not have a $.
-
-### Development
-
-Want to contribute? Great!
-
-Qvet uses Gulp + Browserify for fast developing.
-Make a change in your file and instantanously see your updates!
-
-Open your favorite Terminal and run these command.
-
-```sh
-$ gulp
-```
 
 ### Todos
 

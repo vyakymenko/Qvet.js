@@ -10,14 +10,19 @@
  */
 export let SelectListBoxValues = (listBoxArray, index, afterFn) => {
 	if (index < listBoxArray.length){
-		qva.GetQvObject(listBoxArray[index].name,
-			function () {
-				this.callbackFn = function () {};
-				this.Data.SelectTexts(listBoxArray[index].values);
-				index ++;
-				SelectListBoxValues(listBoxArray, index, afterFn);
-			},
-			this);
+		if (listBoxArray[index].listbox_name != null){
+			qva.GetQvObject(listBoxArray[index].listbox_name,
+				function () {
+					this.callbackFn = function () {};
+					this.Data.SelectTexts(listBoxArray[index].desc_value);
+					index ++;
+					SelectListBoxValues(listBoxArray, index, afterFn);
+				},
+				this);
+		}else{
+			index ++;
+			SelectListBoxValues(listBoxArray, index, afterFn);
+		}
 	}else if (index === listBoxArray.length){
 		if (typeof afterFn === 'function')
 			return afterFn();
