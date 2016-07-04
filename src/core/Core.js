@@ -1,4 +1,4 @@
-const version = '1.0.0';
+const version = require('../../package.json').version;
 
 /**
  * Native.
@@ -8,19 +8,17 @@ import {
 	$NewSheetObject,
 	$OpenRepository,
 	$ShowFields
-} from './native/ToolbarActions';
+} from './native/ToolbarActions_deprecated';
 
-/**
- * Development.
- */
-import {$AddBookmarkQva, $RemoveBookmarkQva} from './development/Bookmarks';
-import {$OpenRepositoryAjax} from './development/Repository';
+import {
+  $removeBookmark, $addBookmark,
+  $openRepository, $newSheetObject, $showFields
+} from './native/index';
 
 /**
  * Addition.
  */
-import {EmailBookmark} from './addition/EmailBookmark';
-import {SelectListBoxValues} from './addition/SelectListBoxValues';
+import { EmailBookmark, selectListBoxValues } from './addition/index';
 
 export class QvetCore {
 
@@ -36,25 +34,24 @@ export class QvetCore {
 			$newSheetObject: $NewSheetObject
 		};
 
-		// TODO: Dev versions for Qva and $.ajax when toolbar not initialized.
-		this.development = {
-			bookmarks: {
-				$add: $AddBookmarkQva,
-				$remove: $RemoveBookmarkQva
-			},
-			$openRepository: $OpenRepositoryAjax
-		};
+    // native
+    this.$addBookmark = $addBookmark;
+    this.$removeBookmark = $removeBookmark;
+    this.$openRepository = $openRepository;
+    this.$newSheetObject = $newSheetObject;
+    this.$showFields = $showFields;
+
+    // addition
+    this.selectListBoxValues = selectListBoxValues;
 	}
+
 
 	getVersion(){
-		return console.log('Qvet version: ' + version);
+		console.log(`Qvet Core version: ${version}`);
 	}
 
+  // TODO: Debug sendEmailBookmark.
 	sendEmailBookmark(config, extraParams){
 		return new EmailBookmark(config, extraParams).createBookmark().openEmailWindow();
-	}
-
-	selectListBoxValues(listBoxArray, index, afterFn){
-		return SelectListBoxValues(listBoxArray, index, afterFn)
 	}
 }
