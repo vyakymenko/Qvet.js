@@ -120,10 +120,10 @@ QlikView Select Values in ListBoxes
 ### Hint's and tricks.
 
 > Q. How to understand where is native hidden QlikView actions ?
-> A. All native methods using *$* character.
+>> A. All native methods using *$* character.
 
 > Q. How to understand where is addition hidden QlikView actions ?
-> A. All non-native methods will not have a *$* character.
+>> A. All non-native methods will not have a *$* character.
 
 ## License
 
