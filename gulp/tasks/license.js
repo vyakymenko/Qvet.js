@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 
 var licence = [
 	'/**',
-	' * <%= pkg.name %> - <%= pkg.description %>',
+	' * Qvet - <%= pkg.description %>',
 	' * ',
 	' * @version v<%= pkg.version %>',
 	' * @author <%= pkg.author %>',

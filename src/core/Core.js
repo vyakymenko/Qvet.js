@@ -12,7 +12,7 @@ import {
 
 import {
   $removeBookmark, $addBookmark,
-  $openRepository
+  $openRepository, $newSheetObject, $showFields
 } from './native/index';
 
 /**
@@ -38,6 +38,8 @@ export class QvetCore {
     this.$addBookmark = $addBookmark;
     this.$removeBookmark = $removeBookmark;
     this.$openRepository = $openRepository;
+    this.$newSheetObject = $newSheetObject;
+    this.$showFields = $showFields;
 
     // addition
     this.selectListBoxValues = selectListBoxValues;
@@ -48,6 +50,7 @@ export class QvetCore {
 		console.log(`Qvet Core version: ${version}`);
 	}
 
+  // TODO: Debug sendEmailBookmark.
 	sendEmailBookmark(config, extraParams){
 		return new EmailBookmark(config, extraParams).createBookmark().openEmailWindow();
 	}

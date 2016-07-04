@@ -1,5 +1,5 @@
 /**
- * @name Call ClientContext Action
+ * @name $callClientAction {function}
  * @note Open client action modal for remove or add bookmark.
  *
  * @param actionName {string} - Action name `ADDBM` or `REMBM`.
@@ -17,7 +17,7 @@ export function $callClientAction (actionName, paramName) {
 }
 
 /**
- * @name Remove Bookmark.
+ * @name $removeBookmark {function}
  * @note Open remove bookmark modal window.
  *
  * @return {void}
@@ -27,7 +27,7 @@ export function $removeBookmark () {
 }
 
 /**
- * @name Add Bookmark.
+ * @name $addBookmark {function}
  * @note Open add bookmark modal window.
  *
  * @return {void}

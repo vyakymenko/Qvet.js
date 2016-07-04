@@ -49,27 +49,23 @@ If the toolbar is not working for your QlikView document, Qvet "NATIVE" will not
 ### Native
 QlikView Add Bookmark Native Modal Open
 ```javascript
-    Qvet.native.bookmarks.$add();
+    Qvet.$addBookmark();
 ```
 QlikView Remove Bookmark Native Modal Open
 ```javascript
-    Qvet.native.bookmarks.$remove();
-```
-QlikView Email Bookmark Native
-```javascript
-    Qvet.native.bookmarks.$email();
+    Qvet.$removeBookmark();
 ```
 QlikView Repository Native Modal Open
 ```javascript
-    Qvet.native.$openRepository();
-```
-QlikView ShowFields Native Modal Open
-```javascript
-    Qvet.native.$showFields();
+    Qvet.$repository();
 ```
 QlikView NewSheetObject Native Modal Open
 ```javascript
-    Qvet.native.$newSheetObject();
+    Qvet.$newSheetObject();
+```
+QlikView ShowFields Native Modal Open
+```javascript
+    Qvet.$showFields();
 ```
 
 ### Addition
@@ -92,25 +88,15 @@ QlikView Send Bookmark via Email
 	})
 	
     // Extra params.
-    Qvet.sendEmailBookmark({
-    		emailSubject: "Your Subject",
-    		name: "Your Bookmark Name", /** Name of the bookmark. */
-    		shared: true, /** Share the bookmark with other users. */
-    		excludeSelections: false, /** Exclude the selections made in the application. */
-    		includeState: true, /** Include state of all objects. */
-    		notDisplayed: false, /** The bookmark is not displayed in the bookmark list but is still selectable in code or via url. */
-    		descriptionShow: false, /** The bookmark description will be shown in a message when the bookmark is selected. */
-    		descriptionMsg: "", /** Description of the bookmark. */
-    		saveInputValues: true /** Include values in input fields.*/
-    	},{
+    Qvet.sendEmailBookmark('',{
     	    emailWindowMode: false /** By default {false} bookmark will open email in new window, but you can change it to {true} and email window will be opened on same domain. */
         })
 ```
 
 QlikView Select Values in ListBoxes
 ```javascript
-    // SelectListBoxValues 
-    Qvet.SelectListBoxValues([
+    // selectListBoxValues 
+    Qvet.selectListBoxValues([
         {
             name: 'YourListBoxId1',
             values: [
