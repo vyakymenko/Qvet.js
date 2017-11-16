@@ -1,6 +1,6 @@
 {
   "name": "qvet",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "QlikView Extension Trickster",
   "main": "gulpfile.js",
   "browserify": {
@@ -18,6 +18,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vyakymenko/qvet.git"
+  },
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build"
   },
   "keywords": [
     "qlikview",
