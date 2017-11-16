@@ -1,5 +1,7 @@
 # Introduction to Qvet.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vyakymenko/Qvet.js.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/vyakymenko/Qvet.js.svg?branch=master)](https://travis-ci.org/vyakymenko/Qvet.js)
 [![Build status](https://ci.appveyor.com/api/projects/status/rkarsh6v33hpu5ec?svg=true)](https://ci.appveyor.com/project/vyakymenko/qvet-js)
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
