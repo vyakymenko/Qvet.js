@@ -1,12 +1,10 @@
-var sequence = require('run-sequence'),
-	gulp = require('./gulp')([
-		'js-dev',
-		'js-build',
-		'license',
-		'watch'
-	]);
-
-
+const sequence = require('run-sequence'),
+      gulp = require('./gulp')([
+        'js-dev',
+        'js-build',
+        'license',
+        'watch'
+      ]);
 
 gulp.task('build', function () {
 	sequence(

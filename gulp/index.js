@@ -5,7 +5,7 @@
  *
  * {Call each of task and initialize it.}
  */
-var gulp = require('gulp');
+const gulp = require('gulp');
 
 module.exports = function(tasks) {
 	tasks.forEach(function(name) {

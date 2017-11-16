@@ -1,5 +1,5 @@
-var gulp = require('gulp'),
-	conf = require('../config');
+const gulp = require('gulp'),
+	    conf = require('../config');
 
 module.exports = function () {
 

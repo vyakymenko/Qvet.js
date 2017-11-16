@@ -1,16 +1,17 @@
-var gulp = require('gulp'),
-	header = require('gulp-header'),
-	pkg = require('../../package.json'),
-	conf = require('../config');
+const gulp = require('gulp'),
+      header = require('gulp-header'),
+      pkg = require('../../package.json'),
+      conf = require('../config');
 
-var licence = [
+const licence = [
 	'/**',
 	' * Qvet - <%= pkg.description %>',
 	' * ',
 	' * @version v<%= pkg.version %>',
 	' * @author <%= pkg.author %>',
 	' * @license <%= pkg.license %>',
-	' */'
+	' */',
+	''
 ].join('\n');
 
 module.exports = function () {

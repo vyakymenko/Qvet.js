@@ -1,16 +1,16 @@
-var gulp = require('gulp'),
-	browserify = require('browserify'),
-	babelify = require('babelify'),
-	source = require('vinyl-source-stream'),
-	gutil = require('gulp-util'),
-	uglify = require('gulp-uglify'),
-	streamify = require('gulp-streamify'),
-	conf = require('../config'),
-	es = require('event-stream');
+const gulp = require('gulp'),
+      browserify = require('browserify'),
+      babelify = require('babelify'),
+      source = require('vinyl-source-stream'),
+      gutil = require('gulp-util'),
+      uglify = require('gulp-uglify'),
+      streamify = require('gulp-streamify'),
+      conf = require('../config'),
+      es = require('event-stream');
 
 module.exports = function () {
 
-	var tasks = conf.src.js.map(function(entry) {
+	const tasks = conf.src.js.map(function(entry) {
 		return browserify({
 			entries: [conf.src.main+entry+'.js'],
 			extensions: ['.js', '.json', '.es6']
@@ -19,9 +19,7 @@ module.exports = function () {
 			.bundle()
 			.on('error', gutil.log)
 			.pipe(source(conf.dist.main+entry+'.min.js'))
-			.pipe(streamify(uglify({
-				preserveComments: "license"
-			})))
+			.pipe(streamify(uglify()))
 			.pipe(gulp.dest(''));
 	});
 

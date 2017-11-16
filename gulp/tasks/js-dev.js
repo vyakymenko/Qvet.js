@@ -1,14 +1,14 @@
-var gulp = require('gulp'),
-	browserify = require('browserify'),
-	babelify = require('babelify'),
-	source = require('vinyl-source-stream'),
-	gutil = require('gulp-util'),
-	conf = require('../config'),
-	es = require('event-stream');
+const gulp = require('gulp'),
+      browserify = require('browserify'),
+      babelify = require('babelify'),
+      source = require('vinyl-source-stream'),
+      gutil = require('gulp-util'),
+      conf = require('../config'),
+      es = require('event-stream');
 
 module.exports = function () {
 
-	var tasks = conf.src.js.map(function(entry) {
+	const tasks = conf.src.js.map(function(entry) {
 		return browserify({
 			debug: true,
 			entries: [conf.src.main+entry+'.js'],

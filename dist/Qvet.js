@@ -1,6 +1,31 @@
 /**
  * Qvet - QlikView Extension Trickster
  * 
+ * @version v1.0.3
+ * @author Valentyn Yakymenko <rayfesoul@gmail.com>
+ * @license MIT
+ */
+/**
+ * Qvet - QlikView Extension Trickster
+ * 
+ * @version v1.0.3
+ * @author Valentyn Yakymenko <rayfesoul@gmail.com>
+ * @license MIT
+ *//**
+ * Qvet - QlikView Extension Trickster
+ * 
+ * @version v1.0.3
+ * @author Valentyn Yakymenko <rayfesoul@gmail.com>
+ * @license MIT
+ *//**
+ * Qvet - QlikView Extension Trickster
+ * 
+ * @version v1.0.3
+ * @author Valentyn Yakymenko <rayfesoul@gmail.com>
+ * @license MIT
+ *//**
+ * Qvet - QlikView Extension Trickster
+ * 
  * @version v1.0.2
  * @author Valentyn Yakymenko <rayfesoul@gmail.com>
  * @license MIT
