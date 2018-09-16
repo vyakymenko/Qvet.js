@@ -41,7 +41,7 @@
     "babel-preset-es2015": "^6.6.0",
     "babelify": "^8.0.0",
     "browserify": "^16.0.0",
-    "event-stream": "^3.3.4",
+    "event-stream": "^4.0.0",
     "eventstream": "0.0.3",
     "gulp": "^3.9.1",
     "gulp-header": "^2.0.5",
