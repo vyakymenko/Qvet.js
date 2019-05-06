@@ -43,7 +43,7 @@
     "browserify": "^16.0.0",
     "event-stream": "^4.0.0",
     "eventstream": "0.0.3",
-    "gulp": "^4.0.0",
+    "gulp": "^4.0.2",
     "gulp-header": "^2.0.5",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.0",
